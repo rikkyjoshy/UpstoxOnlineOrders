@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,720</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,523</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CloseAllApplications_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,36 +74,15 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="476,655" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="376,225" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Upstox Pro" sap:VirtualizedContainerService.HintSize="434,390" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d8b278a1-415e-4a94-823f-7663e282f10f" Version="V1">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,174" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 752" BrowserType="Edge" IconBase64="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" InformativeScreenshot="0a15ff6989504542fc8831a72318f720.png" Selector="&lt;html app='msedge.exe' title='Upstox Pro'/&gt;" Url="[in_Config(&quot;UpstoxUrl&quot;).ToString]" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
   </Sequence>
 </Activity>
