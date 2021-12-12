@@ -109,7 +109,7 @@
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[in_Config(&quot;OrderExcelPath&quot;).ToString+&quot; &quot;+&quot;File read successfully&quot;]" />
     </Sequence>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Upstoxcredentials&quot;).ToString]" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="452,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[uPword]" Username="[uUname]" />
-    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser Edge: Upstox login" sap:VirtualizedContainerService.HintSize="452,2132" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="885e7401-c24a-474c-8dea-8617889258df" Version="V1" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Edge: Upstox login" sap:VirtualizedContainerService.HintSize="452,2132" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="885e7401-c24a-474c-8dea-8617889258df" Version="V1" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

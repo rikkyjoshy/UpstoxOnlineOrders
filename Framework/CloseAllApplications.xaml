@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,523</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,991</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CloseAllApplications_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -76,13 +76,54 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="376,225" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="476,926" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Upstox Pro" sap:VirtualizedContainerService.HintSize="434,661" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,445" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pro.upstox.com/" DesignTimeRectangle="1344, 91, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;svg' parentid='root' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' parentid='root' tag='svg' aaname='' /&gt;" Guid="6a8c67db-ce39-4f0e-bece-0135fac2e3fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVDhPY/hPZTBqIOVgCBv4/uMnKAsT4JPDaaBjUPL/pII6KA8BEvNrwXK4AE4DL1y58V9I3QbFUJBhIDGQHC6ANwyRDQVhQoaBAMFIgRlKjGEgQNBAEAAZRIxhIECUgaSAUQMpB4PdwP//ARs8GGty+dU3AAAAAElFTkSuQmCC" InformativeScreenshot="8c9cf2504851d5745d80ae34b1b5f991.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Upstox Pro' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1247, 91, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div&amp;gt;span&amp;gt;svg' parentid='root' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' parentid='root' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhP3ZKxCsJAEET9UGtrwc60sUyrWFgZCCRN/AGLoI3+QEobK+uI3YYJCZzc7B0Jh4UPptlbHgy3MwnMHwirWy1pee1S3et+qqMKH8+XREkh89XuK5jhTUMVrpPckg2BVIMKUZOJzGCHQYXH8kIlZrDDoMJ9dqYSM6OEwSs3748s45SKELxhh0GFAKexiA6WDLNJZwPi7ckSYubCKWS/rX3GgFM4Ba8QFTdGfHiFuElIEV9d8PvKYwksFGkBx564AgID7toAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pro.upstox.com/" DesignTimeRectangle="1141, 163, 42, 17" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' parentid='logout' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' parentid='logout' tag='DIV' type='' check:text='Logout' /&gt;" Guid="72bee358-d80e-477f-b79c-21e103bb51e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIrSURBVFhH7ZVbi0FRFMfn03r0AbxJpCQUKSIhpZRLEuVFefBCnhRRLuUSUe65rem/Ovt0jrlkzBkzav61y9mXtX57rbWXF3pS/YM/Ws8Pfj6fqd/v02q1kmb+tmTww+FA0WiU2u22NPM3NJ1OKZ/PM59SXwK/XC603W5pv99LM2oha5vNho7HozSjFnxgHXZu1Xg8pkQicT/4ZDIhj8dDNpuNTCYTxWIxWq/X0ipRq9Uio9FIdrudXC4XlUoltge7uGgqlSKz2cznMXq9Hp+DDb/fz4BClUqFR7fb5b0Gg4EcDgd/C90EDseRSIQajQZHC5FF+gqFAv+ezWbk9XppOBzy/t1uR+FwWAYvl8uUzWblTDSbTYZdLpefgkPfivhgMGBwAAmh9kKhEKe+Xq9TJpNRlQAuCXuAw1nYEMIF4vE4dTqdnwXHnIieEBwGAgG+AJwgokqJM4vF4g0YhP3VavV3I47oJpNJLhuhWq12d8TxPjQB/6jGi8UifwMOzlEyuNxoNKJgMChn6b0axzouLfwCFLbQBNxutwoctuFDqTfgOp1ONUQJ4AH6fD6yWq3cHdAllG1xPp/zeafTSel0mi8hwDFyuRx3HXQJdCcACiHyFouF/SETyogjSGgCer2ebQrJ4LcKsAC51ul0Uj1OtMfr8kHE8T+g3Hevvgz+nvAAEUU8NqQU6UV2lBHSWpqAQygVlA9KBY8WdaxFZD+SZuCP1j/4o/Wk4ESvoDptlMMr77wAAAAASUVORK5CYII=" InformativeScreenshot="4188d26613768cb7e992475d91292c66.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Upstox Pro' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1333, 164, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='logout' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='logout' tag='svg' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhP7ZO7DcQgEAVdLSnUACk9ENMDKUWQEpMSv9OesLA4OBmbzB5pRcDbEd8Ni3mFgDEGjLFTZa0tXZUfIQWdcwgh/C3KULalK6SGESml70iZ20LvPYQQiDEi5wwpZZmpTK+QzvgobRkKqUFr3S3K7NKWy0LO+ZxwBG15l01tuQddylGmlCozlekVXno2Sx/28q93l8cJgQ8yaMIYLwxeIwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 752" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAeCSURBVHhe7VtpcFRFEA6HIJZ4FWrhBSqIoIWoVUrpDy1LCcYICCggcgiKERSiIoggiKgIqAhEwylyGcSD0wJzkPuCQA5C7gOSbDYkIQm573a+2fd2Z7MTsrtZqjZ56aqvSL55mZ35Zrqnpx/rws3Vb7jLKN/DDJUuo/yocwNzZHPFnE2T99NZPtjpoTOIwFde+oAGwOaujW3fGtjc5Q0agpTUEqSkliAlnRzdXP3opnGB1MstQNpuE6SkE6Mbw0feqZRbWEOBcSV039RQ6XNWQ0o6MW55LZAuldaRaou2pUmfsxpS0olx5xvBVF7dqEyf6Jvfs6TPWQ0p6cToEqBLgC4BugQwE8CnEwsw4K1QWrE7k+asT6I+7oakRzMC9HzZn3zPXOaTbGxqpnleyZzXjAA3jjlJuuJaZZpE247ncV5bAlw2CbD9hI7zTi8AcvXu7LKCf2Xt1qJDCYAJD50dQR9vTqVdfvl0KKKQdv6no3mbkumB6WF2idFhBLh9YhD9fCSHrlQ1KEMyWTND8ZV6WrU3i/qOPSn9exX3TAmhZz1PG5/rEALcNTmEwhJLlaG0bs1MiYPhhXQzu8PL+hkyK5yyC2qovrGZjkUX0fWvBDi/AL3c/Omv0EvKMAzGTiu6XF5PGfnVVFrRwCeuGn7edCiHeoz2t+hr7sZk5Smi6romemhmuPML4L4slq+YaiVswvD5O14P4ivYf3IwLdmRTpU1psFW1TbSyPnRFn15/pKiPEFUW99Ew1g8cWoBujP4BOqVIRgGPf7LOIvnULpCFodERjWvwzkWQbHDCYC0NDWvShkCUci5UrqOZW5oe8wjktYeyKZpaxI514fthvjMCuVJojPp5dSbuY/YX4cToGVZyvtoLucRwZNzKjlX39BM41bE8dXezY5G1XIKa3hBU+yvwwlw6/ggfryptpEFN/AD2eUFfq7a0l/TyeUlP9r6b57CEOWzSUFAsb9OI8D9TIBqQYBlOzMsBWD5vSMF+NYZBNhw8OoCbOl8AgRqW4DbIABLeFTrEqBLAK0JMCGI5/yq/dSGAJuPXTsBVjuFAP9oXoCLnG+ZCKkCeB3JVRiiwrI6XkMQ+/ucJUyq4TY4eEaYc7sA8oAi4RjENRf83ZNDqEIYHAohEGDR1jSFMVR4Z6xNNF6IUCOITi5TWonylB2CdFlMtxFH+GdMCaEq4Ya5ck8m/wx1bDZDSrYBrA5yetX2BOTzCeEuIFZy9wboOT/CI4q5RpPCEpVVNtAGtms8vVMpJKHUrG7wm6+Ol9ha7qbVPtn8sx95J4LqGkx9eXqnWIzPJkjJNtCL3fLOZpQrQyBeFeo52p8jOKFEYYnSdVVcFBRBUCMU5im1orJ6Gv5eJP+MiV/F8wILDAJNZ7sG/NjlcUYe/+LCJY7NZkjJNoBV9QksMIyCWSHbqqpfL9+VobBsuzc204SV8Zzvx9rxokNcbdFQQZr0dQLvG0IejSxSWoi71ZC3w3k/a/ZnK6yhwDJ0toG3G1LSCiwQIjf8+tUvYjn/6LsRZnEgju0UpM5og18j4GFn1LBojysz3OFYVBGNnH/KGBfGLI+lOtaumm9MMa8toNIk1hYSL1TQDcorM7shJa3A8DmRZn79R1AB990erv5m938sOH4XB4oY8vCscHr8/SgeOMU6ITgxvkAkd0XcFz6N4b+rtv7vi0bR7IaUtAIoior+jtrfCA+D/w6eGWYWDLHtD4ZdooHTQlsdMFZ4/Mo4yisy/R1sf6CetwFH2U5RrYYdl09/aFlftBlS0kpM/e6cWb0PW7m38l/XEMTEgihMX1JH6/68QM8vjKEBU0Op/6RgGsaiOspnJ04Xm0V3WHxWBT/21P7E1T9+yuAW4njsgpS0EtjK0SlXlCEZYgGONhRD4Q6zfzjPkhbLFyYNLDgiTsD/sZKywAhfh5vgcwaxxChLX620GJKl5z6JsRiPXZCSNsB1yVmz9BdZ2gS2WtjqEALtqBO2Fv1bGnYBKs7qyiPzQ9FVNKTWsvcLdkFK2gAMZN2BC2YTxJE2bc054yBxRCL6p+ZWmW1j1eBFEA7b2m3pWePWRjIUFG+KM7AE5hZ49yCOoV2QkjYCrnAovFAZosFwzK1n2V4/dm8Qn3tmwSn+AmU1O89/ZFEceQPO/wenh/HzH89BOLelsZQulN5henY3eIKdEmp/DoGUtAO4ICGQieuLn9N11eSxIYnvgraOLJwsiOwHggvM8gCYvqTWcX4vQkraCVxi9vjnm50MMLgHyuH72N0AYmAiSJgQ5J6cG8XT2VX7siiKXYpwHW5pSRcr6SlHHHkySMl2oDfL1j7wSqECduTJDNLgFMBEcQIg6DW1EiHRhgsVXp3LPsshkJLtBLb6YJa7431ASYXp2mytIVDigoUM0CFn/dUgJR0E5AKDZobTZzvSKSKpjJ/7WP2W6w2PwW7IzK+m7cfz6MXFZ3jeL+vT4ZCS1wBYyXvfDOH5/Kzvz9PCLWm0eHsac5dklgLH87tFX3ZKtDu3txVSUkuQklqClNQSur44qfmvzmr+y9PGb5BjJ2jBHTBHNlc+eReX/wElurWSnbiD3QAAAABJRU5ErkJggg==" InformativeScreenshot="10e7622d70d04331442b04213090cc52.png" Selector="&lt;html app='msedge.exe' title='Upstox Pro'/&gt;" Url="https://pro.upstox.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
