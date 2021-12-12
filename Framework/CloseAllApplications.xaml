@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,991</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>970,992</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CloseAllApplications_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,9 +74,10 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="476,926" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="476,927" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -84,23 +85,23 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Upstox Pro" sap:VirtualizedContainerService.HintSize="434,661" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Upstox Pro" sap:VirtualizedContainerService.HintSize="434,662" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,445" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click Options" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b988d40f-1ae5-414c-897c-54d7b8e39c52" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://pro.upstox.com/" DesignTimeRectangle="1344, 91, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;svg' parentid='root' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' parentid='root' tag='svg' aaname='' /&gt;" Guid="6a8c67db-ce39-4f0e-bece-0135fac2e3fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVDhPY/hPZTBqIOVgCBv4/uMnKAsT4JPDaaBjUPL/pII6KA8BEvNrwXK4AE4DL1y58V9I3QbFUJBhIDGQHC6ANwyRDQVhQoaBAMFIgRlKjGEgQNBAEAAZRIxhIECUgaSAUQMpB4PdwP//ARs8GGty+dU3AAAAAElFTkSuQmCC" InformativeScreenshot="8c9cf2504851d5745d80ae34b1b5f991.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Upstox Pro' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1247, 91, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div&amp;gt;span&amp;gt;svg' parentid='root' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' parentid='root' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhP3ZKxCsJAEET9UGtrwc60sUyrWFgZCCRN/AGLoI3+QEobK+uI3YYJCZzc7B0Jh4UPptlbHgy3MwnMHwirWy1pee1S3et+qqMKH8+XREkh89XuK5jhTUMVrpPckg2BVIMKUZOJzGCHQYXH8kIlZrDDoMJ9dqYSM6OEwSs3748s45SKELxhh0GFAKexiA6WDLNJZwPi7ckSYubCKWS/rX3GgFM4Ba8QFTdGfHiFuElIEV9d8PvKYwksFGkBx564AgID7toAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -111,7 +112,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://pro.upstox.com/" DesignTimeRectangle="1141, 163, 42, 17" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' parentid='logout' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' parentid='logout' tag='DIV' type='' check:text='Logout' /&gt;" Guid="72bee358-d80e-477f-b79c-21e103bb51e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIrSURBVFhH7ZVbi0FRFMfn03r0AbxJpCQUKSIhpZRLEuVFefBCnhRRLuUSUe65rem/Ovt0jrlkzBkzav61y9mXtX57rbWXF3pS/YM/Ws8Pfj6fqd/v02q1kmb+tmTww+FA0WiU2u22NPM3NJ1OKZ/PM59SXwK/XC603W5pv99LM2oha5vNho7HozSjFnxgHXZu1Xg8pkQicT/4ZDIhj8dDNpuNTCYTxWIxWq/X0ipRq9Uio9FIdrudXC4XlUoltge7uGgqlSKz2cznMXq9Hp+DDb/fz4BClUqFR7fb5b0Gg4EcDgd/C90EDseRSIQajQZHC5FF+gqFAv+ezWbk9XppOBzy/t1uR+FwWAYvl8uUzWblTDSbTYZdLpefgkPfivhgMGBwAAmh9kKhEKe+Xq9TJpNRlQAuCXuAw1nYEMIF4vE4dTqdnwXHnIieEBwGAgG+AJwgokqJM4vF4g0YhP3VavV3I47oJpNJLhuhWq12d8TxPjQB/6jGi8UifwMOzlEyuNxoNKJgMChn6b0axzouLfwCFLbQBNxutwoctuFDqTfgOp1ONUQJ4AH6fD6yWq3cHdAllG1xPp/zeafTSel0mi8hwDFyuRx3HXQJdCcACiHyFouF/SETyogjSGgCer2ebQrJ4LcKsAC51ul0Uj1OtMfr8kHE8T+g3Hevvgz+nvAAEUU8NqQU6UV2lBHSWpqAQygVlA9KBY8WdaxFZD+SZuCP1j/4o/Wk4ESvoDptlMMr77wAAAAASUVORK5CYII=" InformativeScreenshot="4188d26613768cb7e992475d91292c66.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Upstox Pro' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1333, 164, 16, 16" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='logout' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='logout' tag='svg' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhP7ZO7DcQgEAVdLSnUACk9ENMDKUWQEpMSv9OesLA4OBmbzB5pRcDbEd8Ni3mFgDEGjLFTZa0tXZUfIQWdcwgh/C3KULalK6SGESml70iZ20LvPYQQiDEi5wwpZZmpTK+QzvgobRkKqUFr3S3K7NKWy0LO+ZxwBG15l01tuQddylGmlCozlekVXno2Sx/28q93l8cJgQ8yaMIYLwxeIwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
